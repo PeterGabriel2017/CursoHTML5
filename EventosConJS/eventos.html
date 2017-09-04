@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Eventos en HTML5 con JavaScript I.</title>
+</head>
+
+<script type="text/javascript">
+
+var imagen;
+	function nieve() {
+		alert(" vamos al paisaje y su nieve");
+	}
+function ManejaAmbiente() {
+	// body...
+	imagen=document.getElementsByTagName('img')[0];
+	imagen.addEventListener("click",nieve,false);
+	imagen.addEventListener("mouseover",crecer,false);
+	imagen.addEventListener("mouseout",menguar,false);
+}
+
+function crecer(){
+imagen.width=600;
+imagen.height=400;
+
+}
+
+function menguar(){
+imagen.width=500;
+imagen.height=300;
+
+}
+
+window.onload=ManejaAmbiente;
+</script>
+
+
+<script type="text/javascript">
+	
+var	imagen=new Array[3];
+
+function tipoAmbiente() {
+		alert(" Belleza ");
+	}
+function ManejaAmbiente() {
+	// body...
+	imagen=document.getElementsByTagName('img')[0];
+	imagen.addEventListener("click",nieve,false);
+	imagen.addEventListener("mouseover",crecer,false);
+	imagen.addEventListener("mouseout",menguar,false);
+}
+
+function crecer(){
+imagen.width=600;
+imagen.height=400;
+
+}
+
+function menguar(){
+imagen.width=500;
+imagen.height=300;
+
+}
+
+window.onload=ManejaAmbiente;
+
+</script>
+
+
+<body>
+
+<p><img src="image/paisaje_nieve.jpg" onclick="nieve()"></p>
+
+
+
+</body>
+</html>

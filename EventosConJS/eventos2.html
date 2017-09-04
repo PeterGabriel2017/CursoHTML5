@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos en HTML5 con JavaScript I.</title>
+
+
+	<script type="text/javascript">
+		 
+var	imagenes=new Array(3);
+
+function tipoFlor() {
+		alert(" Belleza ");
+	}
+function ManejaFlor() {
+
+	for (var i = 0;i<4; i++) {
+		imagenes[i]=document.getElementsByTagName("img")[i];
+	}
+	// body...
+	
+	imagenes[0].addEventListener("click",tipoFlor,false);
+	imagenes[0].addEventListener("mouseover",function(){imagenes[0].width=225; imagenes[0].height=225;},false);
+	imagenes[0].addEventListener("mouseout",function(){ imagenes[0].width=200; imagenes[0].height=200;},false);
+
+	imagenes[1].addEventListener("click",tipoFlor,false);
+	imagenes[1].addEventListener("mouseover",function(){ imagenes[1].width=225; imagenes[1].height=225;},false);
+	imagenes[1].addEventListener("mouseout",function(){ imagenes[1].width=200; imagenes[1].height=200;},false);
+
+	imagenes[2].addEventListener("click",tipoFlor,false);
+	imagenes[2].addEventListener("mouseover",function(){ imagenes[2].width=225; imagenes[2].height=225;},false);
+	imagenes[2].addEventListener("mouseout",function(){ imagenes[2].width=200; imagenes[2].height=200;},false);
+
+	imagenes[3].addEventListener("click",tipoFlor,false);
+	imagenes[3].addEventListener("mouseover",function(){ imagenes[3].width=225; imagenes[3].height=225;},false);
+	imagenes[3].addEventListener("mouseout",function(){ imagenes[3].width=200; imagenes[3].height=200;},false);
+
+
+	
+
+}
+window.addEventListener("load",ManejaFlor,false);
+	</script>
+</head>
+<body>
+
+
+<p> <img src="image/1.jpg"> &nbsp; &nbsp; <img src="image/2.jpg">  &nbsp; &nbsp; <img src="image/3.jpg">  &nbsp; &nbsp; <img src="image/4.jpg"> </p>
+</body>
+</html>
