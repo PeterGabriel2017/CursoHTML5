@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>Canvas II Degradados Lineales. Vídeo 27</title>
+</head>
+
+<style type="text/css">
+	
+
+
+section{
+	width: 500px;
+	
+	margin: auto;
+}
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+var element=document.getElementById("lienzo1");	
+var elementoR=document.getElementById("lienzo2");	
+
+lienzo=elemento.getContext("2d");
+lienzo1=element.getContext("2d");
+lienzo2=elementoR.getContext("2d");
+
+var degradado=lienzo.createLinearGradient(0,150,500,150); //Crea objeto para aplicar degradado al lienzo
+var degrada=lienzo1.createLinearGradient(0,0,500,300);
+var degradadoR=lienzo2.createRadialGradient(250,150,50,250,150,300); //Crea objeto para aplicar degradado circular o radial
+
+degradado.addColorStop(0,"red"); //donde posicion marca donde empieza el degradado
+degrada.addColorStop(0,"red");
+degradadoR.addColorStop(0,"red");
+
+degradado.addColorStop(1,"#09fe03");
+degrada.addColorStop(1,"#09fe03");
+degradadoR.addColorStop(1,"#09fe03");
+
+lienzo.fillStyle=degradado;
+lienzo1.fillStyle=degrada;
+lienzo2.fillStyle=degradadoR;
+
+lienzo.fillRect(0,0,500,300);
+lienzo1.fillRect(0,0,500,300);
+lienzo2.fillRect(0,0,500,300);
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="500" height="300"></canvas>
+  	 <br> <br>
+	 <canvas id="lienzo1" width="500" height="300"> </canvas>
+      <br> <br>
+     <canvas id="lienzo2" width="500" height="300"></canvas>
+  	 <br> <br>
+
+  </section>
+
+
+
+
+</body>
+</html>

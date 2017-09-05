@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>API Canvas XI Imágenes como datos Vídeo 36</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	border: 1px solid #F00;
+
+}
+
+#section{
+	width: 800px;
+	position: relative;
+	margin: auto;
+}
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d");
+
+var imagen=new Image();
+imagen.src="image/canvas.png";
+imagen.addEventListener("load", manipularImagen, false);
+}
+
+function manipularImagen(e){
+	imagen=e.target;
+	lienzo.drawImage(imagen,0,0);
+    var info_imagen=lienzo.getImageData(0,0,145,145);
+    var posicion;
+    for (x=0;x<=145;x++) {
+    	for (y=0;y<=145;y++){
+    		posicion=(info_imagen.width*4*y)+(x*4);
+    		info_imagen.data[posicion]=255-info_imagen.data[posicion];
+    		info_imagen.data[posicion+1]=255-info_imagen.data[posicion+1];
+    		info_imagen.data[posicion+2]=255-info_imagen.data[posicion+2];
+    	}
+    }
+    lienzo.putImageData(info_imagen,0,0);
+}
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="800" height="600"> </canvas>
+
+  </section>
+
+
+</body>
+</html>

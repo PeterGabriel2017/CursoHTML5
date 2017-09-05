@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>API Canvas V Trazados curvos. Vídeo 30</title>
+
+<style type="text/css">
+	
+	#lienzo{
+		border: 1px #F00 solid;
+	}
+
+	#lienzoC{
+		border: 1px #F00 solid;
+	}
+
+	#lienzo1{
+		border: 1px #F00 solid;
+	}
+
+	#lienzo2{
+		border: 1px #F00 solid;
+	}
+
+	#lienzo3{
+		border: 1px #F00 solid;
+	}
+
+</style>
+<script type="text/javascript">
+	
+function comenzar() {
+	
+	var elemento=document.getElementById("lienzo");
+	var elementoC=document.getElementById("lienzoC");
+	var element=document.getElementById("lienzo1");
+	var elemento2=document.getElementById("lienzo2");
+	var elemento3=document.getElementById("lienzo3");
+
+	lienzo=elemento.getContext("2d");
+	lienzoC=elementoC.getContext("2d");// 
+	lienzo1=element.getContext("2d");
+	lienzo2=elemento2.getContext("2d");
+	lienzo3=elemento3.getContext("2d");
+
+	lienzo.beginPath();
+	lienzo.arc(200,100,50,0,1,false);
+	lienzo.stroke(); //trazado sin relleno
+	
+
+	lienzoC.beginPath();
+	lienzoC.arc(200,100,100,0,Math.PI,false);
+	lienzoC.stroke();
+	
+    lienzo1.beginPath();
+	lienzo1.arc(200,100,100,0,Math.PI,true); //metodo para dibujar arco
+	lienzo1.stroke();
+
+	lienzo2.beginPath();
+	lienzo2.moveTo(50,50);
+	lienzo2.quadraticCurveTo(300,50,50,290); //genera trazado curvos
+	lienzo2.stroke();
+
+
+	lienzo3.beginPath();
+	lienzo3.moveTo(250,50);
+	lienzo3.bezierCurveTo(200,125,300,125,250,200); //genera trazado curvos con puntos de control
+	lienzo3.stroke();
+
+}
+
+
+window.addEventListener("load",comenzar,false);	
+</script>
+
+
+</head>
+<body>
+  <section id="dibujo">
+  	
+  	<h3> Trazado curvo - Arco</h3>
+    <canvas id="lienzo" width="500" height="300"></canvas><br><br>
+    
+    <h3> Trazado curvo - Arco SemiCircular</h3>
+    <canvas id="lienzoC" width="500" height="300"></canvas><br><br>
+
+    <h3> Trazado curvo - Arco SemiCircular superior </h3>
+    <canvas id="lienzo1" width="500" height="300"></canvas><br><br>
+
+    <h3> Trazado curvo - Curva</h3>
+    <canvas id="lienzo2" width="500" height="300"></canvas><br><br>
+
+    <h3> Trazado curvo - Curva con punto de control</h3>
+    <canvas id="lienzo3" width="500" height="300"></canvas>
+
+  </section>
+
+
+</body>
+</html>

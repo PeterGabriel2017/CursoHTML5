@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>API Canvas IX. Transformaciones II. Vídeo 34</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	border: 1px solid #F00;
+
+}
+
+#lienzo1{
+	border: 1px solid #F00;
+
+}
+
+#section{
+	width: 800px;
+	position: relative;
+	margin: auto;
+}
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d");
+var elemento1=document.getElementById("lienzo1");	
+lienzo1=elemento1.getContext("2d");
+
+
+lienzo.transform(3,0,0,1,0,0);
+lienzo.font="bold 20px verdana";
+lienzo.fillText("Hola mundo", 50, 50);
+
+
+lienzo.transform(1,0,0,10,0,0);
+lienzo.font="bold 20px verdana";
+lienzo.fillText("Hola mundo", 50, 50);
+
+
+lienzo1.font="bold 20px verdana";
+lienzo1.save();
+lienzo1.fillText("Hola mundo", 50, 50);
+lienzo1.translate(60,70);
+lienzo1.rotate(Math.PI/180*55);
+
+lienzo1.fillText("Hola mundo", 0, 0);
+lienzo1.translate(300, 400);
+lienzo1.rotate(-Math.PI/180*55);
+lienzo1.restore();
+lienzo1.scale(2,2);
+lienzo1.fillText("Hola mundo", 100, 100);
+
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="800" height="600"></canvas>
+     
+     <canvas id="lienzo1" width="800" height="600"></canvas>
+  </section>
+
+
+</body>
+</html>

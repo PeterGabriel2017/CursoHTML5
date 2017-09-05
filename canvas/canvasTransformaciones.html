@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>API Canvas VIII. Transformaciones. Vídeo 33</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	border: 1px solid #F00;
+
+}
+
+#section{
+	width: 800px;
+	position: relative;
+	margin: auto;
+}
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d");
+
+
+
+lienzo.font="bold 20px verdana";
+lienzo.fillText("Hola mundo", 50, 20);
+lienzo.translate(100,100);
+lienzo.scale(3,3);
+
+lienzo.rotate(Math.PI);
+lienzo.fillText("Hola mundo", -200, -150);
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="800" height="600"> </canvas>
+
+  </section>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>API Canvas VII Texto en Canvas. Vídeo 32</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	border: 1px solid #F00;
+
+}
+
+#section{
+	width: 800px;
+	position: relative;
+	margin: auto;
+}
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d");
+lienzo.shadowColor="rgba(0,0,0,0.5)";
+lienzo.shadowOffsetX=3;
+lienzo.shadowOffsetY=3;
+lienzo.shadowBlur=5;
+
+lienzo.font="bold 48px verdana";
+lienzo.textAlign="start";
+lienzo.textBaseline="top";
+lienzo.fillText("Hola mundo", 100, 100);
+//lienzo.moveTo(100,100);
+//ienzo.lineTo(200,100);
+var dimensiones=lienzo.measureText("Hola mundo");
+//lienzo.stroke();
+//lienzo.strokeRect(100,100,dimensiones.width,48);
+//lienzo.strokeRect(100,100,dimensiones.width+5,58);
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="800" height="600">
+  	 	
+  	 </canvas>
+
+  </section>
+
+
+</body>
+</html>

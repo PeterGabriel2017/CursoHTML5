@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>API Canvas IV Trazados. Vídeo 29</title>
+
+<style type="text/css">
+	
+	#lienzo{
+		border: 1px #FF0000 solid;
+	}
+
+	#lienzoC{
+		border: 1px #FF0000 solid;
+	}
+
+</style>
+<script type="text/javascript">
+	
+function comenzar() {
+	
+	var elemento=document.getElementById("lienzo");
+	var elementoC=document.getElementById("lienzoC");
+	lienzo=elemento.getContext("2d");
+	lienzoC=elementoC.getContext("2d");// 
+
+	lienzo.beginPath(); //Comienza la figura
+	lienzo.moveTo(100,200); //mueve el lapiz a la posicion marcada
+	lienzo.lineTo(200,200); //genera linea recta
+	lienzo.lineTo(150,150);
+	lienzo.closePath(); //Termina la figura
+	//lienzo.stroke();
+	lienzo.fill();
+
+
+	lienzoC.beginPath();
+	lienzoC.moveTo(100,200);
+	lienzoC.lineTo(200,200);
+	lienzoC.lineTo(200,150);
+	lienzoC.lineTo(100,150);
+	lienzoC.lineTo(100,200);
+	lienzoC.clip(); //crea una mascara
+
+    lienzoC.beginPath();
+    for (i = 0; i<250; i+=10) {
+    	lienzoC.moveTo(0,i);
+    	lienzoC.lineTo(500,i);
+    }
+
+	lienzoC.stroke();
+	
+}
+
+
+window.addEventListener("load",comenzar,false);	
+</script>
+
+
+</head>
+<body>
+  <section id="dibujo">
+  	
+     <canvas id="lienzo" width="500" height="300"></canvas>
+     <canvas id="lienzoC" width="500" height="300"></canvas>
+
+  </section>
+
+
+</body>
+</html>

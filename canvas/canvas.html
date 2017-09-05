@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>API Canvas I Dibujando con HTML5. Vídeo 26</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	background-color: #F00;
+}
+
+section{
+	width: 500px;
+	position: relative;
+	margin: auto;
+}
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d"); // Define la dimension
+lienzo.fillStyle="blue"; 
+lienzo.strokeStyle="#405cd2";
+lienzo.fillRect(110,80,200,200); //dibuja rectangulo solido
+//lienzo.clearRect(130,130,50,50);
+lienzo.strokeRect(200,200,200,200); //dibuja rectangulo vacio
+lienzo.globalAlpha=0.3;
+
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="500" height="300">
+  	 	
+  	 </canvas>
+
+  </section>
+
+
+</body>
+</html>

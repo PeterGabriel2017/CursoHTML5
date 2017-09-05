@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>API Canvas X. Superposiciones e imágenes. Vídeo 35</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	border: 1px solid #F00;
+
+}
+
+#lienzoI{
+	border: 1px solid #F00;
+
+}
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d");
+var elementoI=document.getElementById("lienzoI");	
+lienzoI=elementoI.getContext("2d");
+
+lienzo.fillStyle="#880000";
+lienzo.fillRect(400,250,200,100);
+//lienzo.globalCompositeOperation="destination-atop";
+lienzo.globalCompositeOperation="source-in";
+
+lienzo.fillStyle="#AAAAFF";
+lienzo.font="bold 80px verdana";
+lienzo.textAlign="center";
+lienzo.textBaseline="middle";
+lienzo.fillText("Hola mundo", 550,300);
+
+var imagen=new Image();
+imagen.src="image/canvas.png";
+imagen.addEventListener("load",function(){
+	//lienzoI.drawImage(imagen,0,0,elementoI.height,elementoI.width)},false);
+    lienzoI.drawImage(imagen,50,10,75,75,0,0,300,300)},false);
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="1200" height="900"></canvas>
+     <canvas id="lienzoI" width="1200" height="900"></canvas>
+
+  </section>
+
+
+</body>
+</html>

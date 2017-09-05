@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>Curso HTML 5 API Canvas VI Tipos de líneas. Vídeo 31</title>
+</head>
+
+<style type="text/css">
+	
+#lienzo{
+	border: 1px solid #F00;
+
+}
+
+
+
+</style>
+
+<script >
+	
+function comenzar() {
+	
+var elemento=document.getElementById("lienzo");	
+lienzo=elemento.getContext("2d");
+
+lienzo.arc(200,150,100,0,Math.PI*2,false);
+lienzo.stroke();
+lienzo.lineWidth=10; //grosor de linea
+lienzo.lineCap="round"; //terminacion de linea
+
+lienzo.beginPath();
+lienzo.arc(200,170,60,0,Math.PI,false);
+lienzo.stroke();
+lienzo.lineWidth=5;
+lienzo.lineJoin="round"; //conexion entre linea
+//lienzo.lineJoin="miter";
+lienzo.lineJoin="round";
+
+lienzo.beginPath();
+lienzo.moveTo(195,135);
+lienzo.lineTo(215,155);
+lienzo.lineTo(195,155);
+lienzo.stroke();
+
+lienzo.lineWidth=1;
+lienzo.beginPath();
+lienzo.arc(175,110,7,0,Math.PI*2,false);
+lienzo.arc(225,110,7,0,Math.PI*2,false);
+lienzo.fill();
+
+lienzo.beginPath();
+lienzo.arc(168,106,15,0,Math.PI*2,false);
+lienzo.stroke();
+
+lienzo.beginPath();
+lienzo.arc(232,106,15,0,Math.PI*2,false);
+lienzo.stroke();
+}
+
+
+window.addEventListener("load",comenzar,false);
+</script>
+
+
+<body>
+  <section id="dibujo">
+  	 
+  	 <canvas id="lienzo" width="800" height="600">
+  	 	
+  	 </canvas>
+
+  </section>
+
+
+</body>
+</html>
