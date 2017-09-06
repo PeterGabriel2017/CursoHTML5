@@ -1,0 +1,101 @@
+@font-face{
+font-family:miFuente;
+src:url(../fonts/OleoScript-Regular.ttf);
+}
+    body{
+        background-image: url(../imagenes/railway-station-1363771_1920.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+    }
+    .formulario{
+        transition: 2s;
+        margin-top: 100px;
+        width: 30%;
+        box-shadow: 0px 0px 40px rgba(213,0,0 ,1),0px 0px 80px rgba(256,256,256 ,1);
+    }
+
+    .formulario:hover{
+        transition: .8s;
+        background-color: rgba(0,0,0,.5);
+    }
+
+
+.logo{
+        height: 75px;
+        margin-top: 40px;
+    }
+    
+ .espaciado{
+        margin-top: 40px;
+    }
+
+    fieldset{
+        transition: 2s;
+        margin-bottom: 50px;
+        border-color: rgba(213,0,0 ,1);
+        border-style: groove;
+        border-width: 5px;
+        border-radius: 20px;
+    }
+    
+
+
+   h3,h4{
+        
+        color:white;
+        text-align: center;
+        font-family: miFuente;
+    }
+  
+    .Input{
+        transition: .8s;
+        background-color: rgba(0,0,0,.5);
+        color: white;
+        border-color:#006;
+	    border-bottom-color:white;
+        border-bottom-style:groove;
+	    border-left:none;
+	    border-right:none;
+	    border-top:none;
+        border-width: 4px;
+        
+    }
+
+    .Input:hover{
+        transition: .8s;
+	    background-color:rgba(55,71,79 ,.5);
+	    box-shadow:inset;
+        border-bottom-color:red;
+	}
+    
+    .Input:focus{
+        transition: .8s;
+	    border-bottom-color:red;
+    }
+
+
+
+    @media screen and (max-width:750px) {
+        
+        .logo{
+            height: 50px;
+
+        }
+        .formulario{
+            transition: 2s;
+            width: 95%;
+            margin-top: 10px;
+        }
+    }
+
+    /*
+    Definición y uso
+  Con la regla @ font-face, los diseñadores web ya no tienen que usar una de las fuentes "web-safe".
+
+   En la nueva regla @ font-face, primero debe definir un nombre para la fuente (por ejemplo,
+   myFirstFont) y luego apuntar al archivo de fuente.
+
+   Consejo: utilice letras minúsculas para la URL de la fuente. Las letras mayúsculas
+ pueden dar resultados inesperados en IE!
+    */
