@@ -1,0 +1,139 @@
+
+/*
+BackGround-Color: La propiedad background-color establece el color de fondo de un elemento.
+El fondo de un elemento es el tamaño total del elemento, incluyendo relleno y borde 
+*/
+
+body{
+ background: url(../image/fondoAzul.jpg) ;
+}
+
+nav.acceder ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;  /*
+                     Establece algunas o todas las propiedades del marcador
+                      de los elementos de la lista
+                     */
+  position: relative; /*
+                      Posiciona los elementos de forma normal, relativa, absoluta o fija.
+                      El posicionamiento relative desplaza a las cajas respecto de su posición original.
+                      Este desplazamiento no afecta al resto de elementos de la página, por lo que se
+                      pueden producir solapamientos y efectos no deseados.
+                      */
+  float: right;      /*
+                     La propiedad float posiciona una caja moviéndola todo lo posible a la izquierda
+                     o derecha de su posición original. Los tres valores de esta propiedad se
+                     interpretan de la siguiente manera:
+
+                    left, la caja se desplaza todo lo posible a la izquierda de la posición en la que
+                    se encontraba. El resto de elementos de la página se adaptan para mostrarse a su
+                    derecha (a menos que se indique lo contrario mediante la propiedad clear).
+                    
+                    right, la caja se desplaza todo lo posible a la derecha de la posición en la que
+                    se encontraba. El resto de elementos de la página se adaptan para mostrarse a
+                    su izquierda (a menos que se indique lo contrario mediante la propiedad clear).
+
+                    none, la caja no se desplaza respecto de su posición original. Además de ser el
+                    valor por defecto de esta propiedad, el valor none se puede utilizar para eliminar
+                    el float aplicado a un elemento mediante otros selectores.
+                     */
+}
+
+nav.acceder #login{
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px 10px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: 600
+
+}
+nav.acceder #login-content {
+  position: absolute;
+  top: 26px;  /*
+              La propiedad top permite desplazar un elemento respecto a su posición original
+              tomando como referencia el borde superior del elemento. Por su propia definición,
+              esta propiedad sólo afecta a los elementos cuya propiedad position tenga un valor
+              de relative, absolute o fixed.
+              */
+  right: 0; /* alinear haciar haciar la derecha*/
+  z-index: 999; /* Para que no se intercedan */
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px 0 10px 10px; /* Pära redondear las esquinas*/
+  width: 320px; 
+  display: none; /* se utiliza comúnmente con JavaScript para ocultar y mostrar elementos
+                 sin eliminarlos ni recrearlos. */
+}
+
+input#user, input#pass {
+  background: #f1f1f1;
+  padding: 12px 40px;
+  margin-bottom: 10px;/*
+	                   La propiedad margin-left establece el margen izquierdo de un elemento.
+	                  */
+  width: 240px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+
+}
+
+input#user{
+
+	background: url(../image/user.png) 5px no-repeat;
+}
+
+input#pass{
+
+	background: url(../image/pass.png) 5px no-repeat;
+}
+
+
+
+
+#submit {    
+  background-color: #359AC2;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5); /*  agrega sombra al texto */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;  
+  border: 1px solid #044E6B;
+  float: left;
+  height: 28px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial;
+  color: #fff;
+  -webkit-transition:background-color 1s;
+  -moz-transition:background-color 1s;
+}
+#submit:hover {    
+  background-color: #044E6B;
+} 
+
+label {
+  float: right;
+  line-height: 28px;
+  font-size: 14px;
+  color: #666;
+}
+
+ /*
+     La propiedad CSS box-shadow  describe uno o más efectos de sombra como una
+     lista separada por comas. Permite proyectar una sombra difuminada en la estructura
+     de casi cualquier elemento. Si un border-radius es especificado en un elemento
+     con un box shadow, el box shadow asume las mismas esquinas redondeadas.
+     El orden z de multiples box shadows es igual al los multiple text shadows
+     (la primera sombra especificado en la parte superior).
+    
+    inset
+	Si no se especifica (por defecto), la sombra asume una sombra difuminada
+	(como si la caja fuera levantada por encima del contenido).
+	La presencia de la palabra clave inset  cambia la sombra a una dentro
+	del marco (como si el contenido estuviera deprimido dentro de la caja).
+	Inset shadows dibuja dentro del borde (incluso de los transparentes), 
+	por encima del fondo, pero por debajo del contenido.
+	
+   */

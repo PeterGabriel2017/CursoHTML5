@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,
+    user-scalable=no">
+	<title>Formulario desplegable con HTML - CSS - jQuery</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo_form2.css">
+   
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+			$(function(){
+		       $('#login').click(function(){
+			   $(this).next('#login-content').slideToggle();
+			   $(this).toggleClass('active');          
+			   });
+			});
+		</script>
+
+</head>
+<body>
+		<nav class="acceder">
+		   <ul>
+		      <li>
+		         <a id="login" href="#">Acceder</a>
+		         <div id="login-content">
+		            <form>
+						<input id="user" type="email" name="Email" placeholder="Usuario" required>   
+						<input id="pass" type="password" name="Password" placeholder="Contraseña" required>
+						<input type="submit" id="submit" value="Entrar">
+						<label><input type="checkbox" checked="checked">Recuerdame</label>
+			        </form>
+			     </div>                     
+		      </li>
+		   </ul>
+		</nav>
+
+	
+</body>
+</html>
+
+
+
+
+<!-- 
+Configuración de la ventana de visualización
+HTML5 introdujo un método para permitir que los diseñadores de páginas web tomen el control sobre la ventana gráfica, a través de la <meta>etiqueta.
+
+Debe incluir el siguiente <meta>elemento de ventana de visualización en todas las páginas web:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Un <meta>elemento viewport le da al navegador instrucciones sobre cómo controlar las dimensiones y la escala de la página.
+
+La width=device-widthparte establece el ancho de la página para seguir el ancho de pantalla del dispositivo (que variará dependiendo del dispositivo).
+
+La initial-scale=1.0pieza establece el nivel de zoom inicial cuando la página es cargada por primera vez por el navegador.
+
+A continuación se muestra un ejemplo de una página web sin la metaetiqueta de vista y la misma página web con la metaetiqueta de vista:
+-->
+
+<!-- ================ <Nav> ==================
+
+El por qué HTML5 añade esta etiqueta es sencillo. Cada vez es más habitual que nuestras páginas aparezcan no solo en los navegadores que usamos en el ordenador, sino también en dispositivos móviles, teléfonos, iPads, etc, etc. Al usar esta etiqueta el agente de usuario (el navegador o como quiera llamarse según el dispositivo usado) podría dar la opción al usuario de esconder el menú de navegación para no molestar, para tener más espacio disponible para ver el contenido importante. También podría dar la opción de hacerlo aparecer cuando el usuario quiera cambiar de sección. Esto solo sería posible si se sabe dónde empieza y dónde termina ese menú de navegación y eso es precisamente lo que conseguimos con la etiqueta nav. 
+
+-->
+
+<!-- ============== JQuery ==============================
+
+jQuery es una librería de JavaScript opensource mantenida por la fundación jquery.org. Su lema resume muy bien lo que nos aporta esta librería: “Write less, do more, js library”. Escribe menos, haz más, y es que esta librería nos facilita la ardua tarea de manipular los elementos del DOM de HTML que hasta ahora habíamos visto como hacerlo con JavaScript.
+
+
+Selector	Tipo de selector
+“p”			Por etiqueta HTML
+“#elemto1”	Por identificador. Atribtuo id de HTML
+“.clase1”	Por clase. Atributo class de HTML
+“a.clase1”	 Por elemento y clase
+“[atributo]”	Por tipo de atributo especifrico
+“*”			Todos los elementos
+this		Elemento actual
+
+El método slideToggle () alterna entre slideUp () y slideDown () para los elementos seleccionados.
+Este método comprueba la visibilidad de los elementos seleccionados. slideDown () se ejecuta si un elemento está oculto. slideUp () se ejecuta si un elemento es visible - Esto crea un efecto de conmutación.
+
+El toggleClass() método alterna entre la adición y la eliminación de uno o más nombres de las clases de los elementos seleccionados.
+Este método comprueba cada elemento de los nombres de las clases especificadas. Los nombres de las clases se agregan si falta, y eliminado si ya está establecido - esto crea un efecto de palanca.
+Sin embargo, mediante el parámetro "interruptor", sólo se puede especificar para eliminar o sólo añadir un nombre de clase.
+
+
+-->
