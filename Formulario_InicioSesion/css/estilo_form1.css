@@ -1,0 +1,103 @@
+
+/*
+BackGround-Color: La propiedad background-color establece el color de fondo de un elemento.
+El fondo de un elemento es el tamaño total del elemento, incluyendo relleno y borde 
+*/
+
+
+body{
+	background-color: #eee
+}
+
+form{
+	margin: 180px auto; /* Margen automatico a los lados*/
+	width: 350px; /* ancho */
+    height: 250px; /* altura*/ 
+ 	background-color: white;
+ 	border-bottom: 4px solid darkorange; /* La propiedad taquigrafía borde-fondo 
+ 	                                     establece todas las propiedades de borde 
+ 	                                     inferior en una declaración. */
+
+}
+
+form label{
+	display: block; /*display es la propiedad más importante para controlar estructuras.
+	                Cada elemento tiene un valor de display por defecto dependiendo de
+	                qué tipo de elemento sea. El valor por defecto para la mayoría de
+	                los elementos es usualmente block (de bloque) o inline (en línea).
+	                Un elemento que es block es comunmente llamado elemento block-level.
+	                 Un elemento inline siempre es llamado elemento inline.
+	                */
+    color: white;
+    background: #f07800;
+    padding: 12px; /*
+                    La Propiedad padding Establece la anchura de algunas o todas las zonas
+                    de relleno de los elementos
+                   */
+   text-align: center;
+  
+   /*La propiedad font permite establecer algunas o todas las propiedades tipográficas 
+   del texto de forma simultánea.
+   */
+   font-size: 20px;
+   font-weight: bold; /* La propiedad font-weight establece cómo deben aparecer los caracteres
+                         gruesos o delgados en el texto.
+                      */
+   font-family: cursive;                  
+}
+
+form input[type="text"],input[type="password"]{
+	width: 230px;
+	padding: 12px 40px;
+	font-weight: bold;
+	font-family: cursive;
+	margin-left: 18px; /*
+	                   La propiedad margin-left establece el margen izquierdo de un elemento.
+	                   */
+	margin-bottom: 10px; /*
+	                    La propiedad margin-left establece el margen izquierdo de un elemento.
+	                     */
+	border: 1px solid #f07800;
+	text-transform: capitalize;
+
+	/* transition:[Propiedad CSS] [Duración] [Función de Tiempo] [Retardo]; */
+	-webkit-transition:all 0.5s; /*  Chrome y Safari */
+	-moz-transition:all 0.5s; /* Para firefox */
+
+}
+
+form input[type="text"]{
+
+	background: url(../image/user.png) 5px no-repeat;
+}
+
+form input[type="password"]{
+
+	background: url(../image/pass.png) 5px no-repeat;
+}
+
+form input[type="text"]:focus,input[type="password"]:focus{
+
+border: 1px solid #333;
+background: none;
+width: 290px;
+padding: 12px 10px;
+
+	}
+
+
+form input[type="submit"]{
+	background: #f07800;
+	color: white;
+	display: inline-block;
+	margin-left: 18px;
+	margin-bottom: 10px;
+	padding: 8px 20px;
+	border: none;
+	font-weight: bold;
+}
+
+form input[type="submit"]:hover{
+	background: darkorange;
+	cursor:pointer;
+}
